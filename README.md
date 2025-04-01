@@ -130,6 +130,9 @@ Breaking down the syntax:
 - Can contain both abstract and concrete methods
 - Cannot be instantiated directly
 - Used as a base for inheritance
+- In Java, when a class inherits from an abstract class, it has two choices:
+    - Implement all abstract methods – If the subclass is a regular (concrete) class, it must provide implementations for all abstract methods of the abstract parent class.
+    - Remain abstract – If the subclass doesn't implement all abstract methods, it must itself be declared as abstract, and then its own subclasses must provide implementations for the remaining abstract methods.
 
 ## Two ways to achieve abstraction
 - **Interface** (better)
@@ -143,13 +146,13 @@ Breaking down the syntax:
     - Created by compiler
     - Initializes variables to default values
     - Default constructor will be called only if programmer didn't write any other constructor
-    - Only one line of code using super keyword
-    class
+    - Only one line of code - super();
+    - [Same access modifier as the class] - can't be pvt or protected bcz outer classes cannot be private or protected
 
 - **Parameterized constructor** - created by programmer
 - **No-arg/zero-arg constructor** - created by programmer
 
-  ***[Same access modifier as the class]***
+
 
 ## Differences between Constructors and Methods
 
