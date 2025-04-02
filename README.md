@@ -164,3 +164,22 @@ Breaking down the syntax:
 | Can't be inherited (bcz it is not a part of class)                      | Can be inherited |
 | Used to initialize values                                               | Used to perform tasks |
 | Default constructor provided by compiler if no other constructor exists | No default method provided |
+
+# Object-Oriented Programming Concepts
+
+## Copy Constructor
+- **Shallow Copy**: Passes memory location (reference) of the original object
+- **Deep Copy**: Creates and passes a completely new copy of the original object
+
+## Inheritance
+Types of relationships:
+- **IS-A**: Derived class is a type of base class (classic inheritance)
+- **HAS-A**: Derived class contains an instance of base class as a member
+- **USES-A**: Derived class uses a base class object within its functions
+
+## Inheritance Alternative
+- **Composition**: Building classes by combining objects of other classes instead of inheriting
+
+## Object Class
+- Parent class of all classes in Java
+- If a class doesn't explicitly extend another class, it implicitly extends Object class
