@@ -9,3 +9,4 @@ public class Main {
         c2a.fun1();
     }
 }
+
