@@ -34,7 +34,7 @@
 - A class must implement all methods of an interface and give them functionality.
 
 ## Marker interface 
-- doesn't contain any abstract method or var
+- doesn't contain any abstract method or var. But i can contain default or static method.
 - used to provide extra feature or abilities to object at run time 
 -  ```java
     interface {
@@ -57,3 +57,4 @@
    - Package: java.rmi.Remote
    - Usage: Any remote object must implement Remote and extend UnicastRemoteObject. 
    - Note: All methods in the interface must throw RemoteException.
+
