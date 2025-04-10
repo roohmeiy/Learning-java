@@ -1,5 +1,4 @@
 package coupling;
-
 public class LooseCouplingMain {
     public static void main(String[] args) {
         DieselEngine de=new DieselEngine();

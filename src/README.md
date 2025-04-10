@@ -123,12 +123,12 @@ Because behind the scenes, Java knows the real object is a `Cat`.
 
 ### 👇 Summary of **Inheritance Behavior by Access Modifier**:
 
-| **Access Modifier** | **Is Inherited?**          | **Scope**                                       |
-|---------------------|----------------------------|-------------------------------------------------|
-| `public`            | ✅ Yes                     | Everywhere                                      |
+| **Access Modifier** | **Is Inherited?**          | **Scope**                                      |
+|---------------------|----------------------------|------------------------------------------------|
+| `public`            | ✅ Yes                     | Everywhere                                     |
 | `protected`         | ✅ Yes                     | Same package + subclasses (even in other pkgs) |
-| `default`           | ✅ Yes                     | Only in **same package**                        |
-| `private`           | ❌ No                      | Not inherited at all                           |
+| `default`           | ✅ Yes                     | Only in **same package**                       |
+| `private`           | ❌ No                      | Not inherited at all  , same class only        |
 
-
-
+- U can access instance variable in same clas using ob and normally
+- default is known as package-Private 
