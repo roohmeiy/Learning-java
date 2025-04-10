@@ -26,15 +26,15 @@ public class Main {
 
 
         //pyramid
-//        Pyramid pyramid=new Pyramid();
-//        pyramid.pyramid();
+        Pyramid pyramid=new Pyramid();
+        pyramid.pyramid();
 
         //pyramid rev
 //        ReversePyramid pyramid = new ReversePyramid();
 //        pyramid.pyramid();
 
         //sum of even digits
-        SumOfEvenDigits sum = new SumOfEvenDigits();
-        sum.sum();
+//        SumOfEvenDigits sum = new SumOfEvenDigits();
+//        sum.sum();
     }
 }
