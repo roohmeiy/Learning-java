@@ -8,8 +8,8 @@ public class Calculator {
     void calculate(){
         do{
             System.out.println("Enter 2 numbers");
-            double num1= s.nextInt();
-            double num2=s.nextInt();
+            double num1= s.nextDouble();
+            double num2=s.nextDouble();
             System.out.println("What is the operation you want to perform? \n Enter one from: +,-,*,/,%");
             String operator= s.next();
             if (operator.equals("+"))
@@ -27,7 +27,7 @@ public class Calculator {
                 System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
              else
                 System.out.println("Enter a valid operation.");
-            System.out.println("Do you want to do another operation. Enter 'y' for yes.");
+            System.out.println("Do you want to do another operation? Enter 'y' for yes.");
             response = s.next().charAt(0);
         } while(response=='y' || response=='Y');
     }

@@ -1,11 +1,13 @@
 package loops;
 
+import interfaces.A;
+
 public class Main {
     public static void main(String[] args) {
         //prime num
 
-//        PrimeNum pn=new PrimeNum();
-//        pn.primeNum(18);
+        PrimeNum pn=new PrimeNum();
+        pn.primeNum();
 
         //47th prime num
 
@@ -20,14 +22,14 @@ public class Main {
 //        SumOfDigitsInNumber sum=new SumOfDigitsInNumber();
 //        sum.sumOfDigits();
 
-        //calculator
+//        //calculator
 //        Calculator calculate=new Calculator();
 //        calculate.calculate();
-
+//
 
         //pyramid
-        Pyramid pyramid=new Pyramid();
-        pyramid.pyramid();
+//        Pyramid pyramid=new Pyramid();
+//        pyramid.pyramid();
 
         //pyramid rev
 //        ReversePyramid pyramid = new ReversePyramid();
@@ -36,5 +38,9 @@ public class Main {
         //sum of even digits
 //        SumOfEvenDigits sum = new SumOfEvenDigits();
 //        sum.sum();
+
+        //armstrong
+//        Armstrong armstrong=new Armstrong();
+//        armstrong.isArmstrong();
     }
 }

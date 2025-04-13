@@ -1,22 +1,21 @@
 package loops;
 
-public class FortySeventhPrimeNum {
-    int count = 1;
-    int num = 2;
-    boolean isBoolean;
-
-    void fortySeventhPrimeNum() {
-        while (count <= 47) {
-            if (num >= 2 && !notPrime(num))
-                count++;
-            num++;
+class FortySeventhPrimeNum{
+    int count =1;
+    int num=2;
+    void fortySeventhPrimeNum(){
+        while(count<=47){
+               if(isPrime(num))
+                   count++;
+               num++;
         }
-        System.out.println("47th prime num: " + num);
+        System.out.println("47th prime num: " + (num-1));
     }
-    boolean notPrime(int num){
-        for (int i=2;i<num;i++)
-            if (num % i == 0)
-                return true;
-        return false;
+    boolean isPrime(int num){
+        for( int i=2; i < num;i++ ){
+            if ( num < 2  || num%i==0)
+                return false;
+        }
+        return true;
     }
 }
