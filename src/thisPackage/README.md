@@ -1,0 +1,6 @@
+- this keyword refers to current class' ob
+- we can call function with this inside the fun
+- this keyword must be first st. in the constructor call
+- constructor chaining
+- used to pass an arg -  ob ref in method and ob ref in constructor
+- can return current class ob
