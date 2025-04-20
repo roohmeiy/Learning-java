@@ -1,6 +1,6 @@
 package com.anudip.learning;
 
-public class Student {
+class Student {
     private String name, department;
     private int age;
 

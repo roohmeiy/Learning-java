@@ -1,18 +1,10 @@
 package loops;
 
-import interfaces.A;
+import primeNum.PrimeNum;
 
 public class Main {
     public static void main(String[] args) {
-        //prime num
 
-        PrimeNum pn=new PrimeNum();
-        pn.primeNum();
-
-        //47th prime num
-
-//        FortySeventhPrimeNum fsp=new FortySeventhPrimeNum();
-//        fsp.fortySeventhPrimeNum();
 
         //Digits in number
 //        CountDigitsInNum count=new CountDigitsInNum();

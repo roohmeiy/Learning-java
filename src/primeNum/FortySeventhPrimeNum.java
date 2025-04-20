@@ -1,4 +1,4 @@
-package loops;
+package primeNum;
 
 class FortySeventhPrimeNum{
     int count =1;

@@ -9,7 +9,7 @@ public class Main {
         catch(NullPointerException | ArithmeticException e){
             System.out.println("exception occured");
         }
-//        Voting voting= new Voting();
-//            voting.voting();
+        Voting voting= new Voting();
+            voting.voting();
     }
 }

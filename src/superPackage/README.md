@@ -1,0 +1,3 @@
+- refers to instance of intermediate parent 
+- every class's constructor have first  statement super(); -before jdk24
+- 
