@@ -28,7 +28,8 @@ public class DuplicateElementsIn2array {
             else
                 list.add(a2[j]);
         }
-
+// array list can't directly store primitive data types. java implicitly do autoboxing / unboxing.
+        // array list is slower than arrays and linkedlist
         for (int k=0; k< list.size()-1; k++ ){
             if(Objects.equals(list.get(k), list.get(k + 1))){
                 if(k==0 || !Objects.equals(list.get(k), list.get(k - 1)))

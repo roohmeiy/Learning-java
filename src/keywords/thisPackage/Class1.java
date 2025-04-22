@@ -1,4 +1,4 @@
-package thisPackage;
+package keywords.thisPackage;
 
 public class Class1 {
     Class1(){

@@ -31,5 +31,6 @@ public class DividedByZero {
         catch (ArithmeticException e) {
             System.out.println("Arithemtic exception occurred");
         }
+        System.out.println("i will also execute");
     }
 }

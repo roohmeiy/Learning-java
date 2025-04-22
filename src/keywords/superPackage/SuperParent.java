@@ -1,4 +1,4 @@
-package superPackage;
+package keywords.superPackage;
 
 public class SuperParent {
     SuperParent(){

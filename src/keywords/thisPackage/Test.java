@@ -1,4 +1,4 @@
-package thisPackage;
+package keywords.thisPackage;
 
 public class Test {
         void test(){

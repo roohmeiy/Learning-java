@@ -1,6 +1,4 @@
-package superPackage;
-
-import java.sql.SQLOutput;
+package keywords.superPackage;
 
 public class Child extends Parent{
     int a=20;

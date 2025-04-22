@@ -1,0 +1,10 @@
+- You can't make local variable - static
+- Static class will be called on the time of class loading
+- static blocks will run from top to bottom in numbering
+- instance method belongs to instance and static method belongs to class
+- within the same class, we can access static method directly or with classname( we can also call static method with object reference but it is not recommended )
+- we can't use this and super in static block
+- we can only access static member inside static method
+- can't create static constructors
+- why main method is static?
+  -> so that JVM can call it without obj

@@ -1,4 +1,4 @@
-package thisPackage;
+package keywords.thisPackage;
 
  class ReturnTest {
      ReturnTest returnTest(){
