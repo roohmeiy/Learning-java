@@ -1,13 +1,14 @@
 - String -> array of characters -> non-primitive DT
 - if want to use string then there are 3 classes
     - java.lang.String ->immutable
-    - java.lang.StringBuffer -> mutable
-    - java.lang.StringBuilder -> mutable
-  
+    - java.lang.StringBuffer -> mutable -> we don't use this --> all functions are synchronized  ---> thread safe --> slow application performance
+    - java.lang.StringBuilder -> mutable --> same functions as stringbuilder --> all functions -> not synchronized  ---> mot thread safe  ---> fast application performance
+    - stringbuffer from starting and stringbuilder in v1.5
 - Creating String
     - String str=new String("Pihu); //creating string using new 
     - String str="Pihu" //creating string using string literal
-      
+
+- equals fun= object class fun which check reference but string class override  the equals fun, so it checks content
 
 ### Step 1: **String Pool Check**
 Each time `new String("Hello")` is executed, Java first checks the **String Pool**, a special memory area inside the **Heap**. The literal `"Hello"` is stored there if it doesn’t already exist.
@@ -139,3 +140,133 @@ substring() → Returns a String (most commonly used).
 subSequence() → Returns a CharSequence (useful for polymorphism).
 
 Functionally identical in behavior but differ in return type.
+
+---
+
+# **String Arrays vs Character Arrays in Java**
+
+## **1. Character Arrays (`char[]`)**
+A character array is a sequence of primitive `char` values.
+
+### **Declaration & Initialization**
+```java
+// Method 1: Declaration then initialization
+char[] charArray1 = new char[5]; // Creates array with 5 empty slots
+charArray1[0] = 'J';
+charArray1[1] = 'A';
+charArray1[2] = 'V';
+charArray1[3] = 'A';
+
+// Method 2: Direct initialization
+char[] charArray2 = {'J', 'A', 'V', 'A'};
+```
+
+### **Key Features**
+- Stores **primitive** `char` values
+- **Mutable** (contents can be changed)
+- **Faster** for low-level operations
+- Fixed length after creation
+
+### **Common Operations**
+```java
+char[] chars = {'H', 'e', 'l', 'l', 'o'};
+
+// Access elements
+char first = chars[0]; // 'H'
+
+// Modify elements
+chars[0] = 'h'; // Now {'h', 'e', 'l', 'l', 'o'}
+
+// Convert to String
+String str = new String(chars); // "hello"
+
+// Length
+int length = chars.length; // 5
+```
+
+### **When to Use**
+- When you need to **modify individual characters**
+- For **low-level string manipulation**
+- When working with **I/O operations** (e.g., reading files)
+
+---
+
+## **2. String Arrays (`String[]`)**
+A string array stores references to `String` objects.
+
+### **Declaration & Initialization**
+```java
+// Method 1: Declaration then initialization
+String[] strArray1 = new String[3];
+strArray1[0] = "Java";
+strArray1[1] = "Python";
+strArray1[2] = "C++";
+
+// Method 2: Direct initialization
+String[] strArray2 = {"Apple", "Banana", "Orange"};
+```
+
+### **Key Features**
+- Stores **objects** (instances of `String`)
+- **Immutable** elements (individual strings can't be modified)
+- Flexible for storing multiple strings
+- Supports all `String` methods
+
+### **Common Operations**
+```java
+String[] languages = {"Java", "Python", "JavaScript"};
+
+// Access elements
+String first = languages[0]; // "Java"
+
+// Length
+int length = languages.length; // 3
+
+// Join into single string
+String joined = String.join(", ", languages); // "Java, Python, JavaScript"
+
+// Modify array (but not string contents)
+languages[1] = "C++"; // Now {"Java", "C++", "JavaScript"}
+```
+
+### **When to Use**
+- When storing **multiple strings** (e.g., names, file paths)
+- For **higher-level string operations**
+- When working with **collections** or **APIs** that expect strings
+
+---
+
+## **Key Differences**
+| Feature          | `char[]`                          | `String[]`                        |
+|------------------|----------------------------------|----------------------------------|
+| **Type**         | Primitive array                  | Object array                     |
+| **Mutability**   | Elements can be modified         | Array can be modified, but strings are immutable |
+| **Memory**       | More memory-efficient            | Less efficient (stores objects)  |
+| **Usage**        | Character-level manipulation     | String-level operations          |
+| **Example**      | `{'H','e','l','l','o'}`          | `{"Hello", "World"}`             |
+
+---
+
+## **Conversion Between Them**
+### **1. String → char[]**
+```java
+String str = "Hello";
+char[] chars = str.toCharArray(); // {'H', 'e', 'l', 'l', 'o'}
+```
+
+### **2. char[] → String**
+```java
+char[] chars = {'W', 'o', 'r', 'l', 'd'};
+String str = new String(chars); // "World"
+```
+### toString
+- we use when we want to convert stringbuilder ob into string
+- when we want to print details of ob rather than hash value
+
+## **Summary**
+- **Use `char[]`** when you need to:
+  - Modify individual characters
+  - Work with low-level text processing
+- **Use `String[]`** when you need to:
+  - Store multiple strings
+  - Use high-level string operations

@@ -1,18 +1,18 @@
 package com.anudip.learning;
 import java.util.Scanner;
-public class Car {
+public class Car1 {
     String make, model;
     short year;
     int price;
 
     //parameterized constructor
-    Car(String make, String model, short year,int price){
+    Car1(String make, String model, short year, int price){
         this.make=make;
         this.model=model;
         this.year=year;
         this.price=price;
     }
-    Car(){} //default constructor
+    Car1(){} //default constructor
 
     void getData(){
         Scanner sc=new Scanner(System.in);
@@ -36,20 +36,20 @@ public class Car {
         //car1
         System.out.println(" Details of car1 with parameterized constructor");
         System.out.println("\n Enter specifications of the car1 respectively:");
-        Car car1=new Car("make1","model1", (short) 2004, 955520);
+        Car1 car1=new Car1("make1","model1", (short) 2004, 955520);
         car1.display();
 
         //car2
         System.out.println("\n Details of car 3 and car4 by taking input from user");
-        Car car2 = new Car();
+        Car1 car12 = new Car1();
         System.out.println("\n Enter specifications of the car3 respectively:");
-        car2.getData();
-        car2.display();
+        car12.getData();
+        car12.display();
 
         //car3
-        Car car3=new Car();
+        Car1 car13 =new Car1();
         System.out.println("\n Enter specifications of the car4 respectively:");
-        car3.getData();
-        car3.display();
+        car13.getData();
+        car13.display();
     }
 }

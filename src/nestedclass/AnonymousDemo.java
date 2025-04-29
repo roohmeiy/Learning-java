@@ -1,4 +1,5 @@
 package nestedclass;
 
-public class AnonymousDemo {
+public abstract class AnonymousDemo {
+    abstract void display();
 }

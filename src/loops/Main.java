@@ -31,8 +31,6 @@ public class Main {
 //        SumOfEvenDigits sum = new SumOfEvenDigits();
 //        sum.sum();
 
-        //armstrong
-//        Armstrong armstrong=new Armstrong();
-//        armstrong.isArmstrong();
+
     }
 }

@@ -124,5 +124,39 @@ public class StringFunctions {
                 lower[i] += 32;
         }
         System.out.println(lower);
+
+        //join
+        System.out.println();
+        String[] languages={"Java" ,"C" ,"C++"};
+        String first = languages[0];
+        int length = languages.length;
+        String joined = String.join(", ", languages);
+        languages[1]="Python";
+        System.out.println();
+        System.out.println(languages[0]);
+        System.out.println(joined);
+        System.out.println();
+        for(String x: languages)
+            System.out.println(x);
+
+        //equals and ==
+        System.out.println();
+        String x1=new String("Pihu");
+        String x2=new String("Pihu");
+        System.out.println(x1==x2);
+        System.out.println(x1.equals(x2));
+        System.out.println();
+        String x3="Pihu";
+        String x4="Pihu";
+        System.out.println(x3==x4);
+        System.out.println(x3.equals(x4));
+        System.out.println(x3.equalsIgnoreCase(x4));
+
+        //indexOf
+        System.out.println();
+        String x5="Payal is a good girl";
+        System.out.println(x5.indexOf("g"));
+        System.out.println(x5.lastIndexOf("g"));
+        System.out.println(x5.indexOf("g", 12));
     }
 }

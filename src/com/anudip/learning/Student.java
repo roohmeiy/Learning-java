@@ -1,66 +1,54 @@
 package com.anudip.learning;
 
-class Student {
-    private String name, department;
-    private int age;
+//creating class Student
+public class Student {
 
-    Student(){} //default parameter
+    //declaring variables
+    String name, department;
+    int age;
 
-    //parameterized constructor
-    Student(String name, String department, int age){
+    //Zero-arg constructor (Default) --------> initializing default values of variables
+    Student(){
+        name="Unknown";
+        age=20;
+        department="Unassignment";
+    }
+
+    //Parameterized constructor that will take 2 parameters - name, int
+    Student(String name, int age){
         this.name=name;
-        this.department=department;
         this.age=age;
     }
 
-    //getters and setters for properties
-    public String getName(){
-        return name;
-    }
-    public void setName(String name){
+    //Parameterized constructor that will take 3 parameters - name, int, department
+    Student(String name, int age, String department){
         this.name=name;
-    }
-    public int getAge(){
-        return age;
-    }
-    public void setAge(int age){
         this.age=age;
-    }
-    public String getDepartment(){
-        return department;
-    }
-    public void setDepartment(String department){
         this.department=department;
     }
 
+    //display method to display all the details of student
+    void display(){
+        System.out.println("Details................");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Department: " + department);
+        System.out.println();
+    }
+}
 
-        void display(){
-            System.out.println(name);
-            System.out.println(age);
-            System.out.println(department);
-        }
+//Main Class
+class StudentMain{
 
+    //main method
     public static void main(String[] args) {
-        System.out.println("With parameterized constructor");
-        Student s1=new Student("Pihu", "cse", 20);
-        s1.display();
-        Student s2=new Student("Payal", "DevOps", 20);
-        s2.display();
+        Student student1=new Student(); //calling ob(student1) with no-arg constructor that will initialize the variables with default values
+        student1.display();               //printing details of student1
 
-        System.out.println("\n With default  constructor");
-        Student s3= new Student();
-        s3.setName("Pihu Sharma");
-        s3.setAge(20);
-        s3.setDepartment("DevOps");
-        s3.display();
+        Student student2=new Student("Payal", 20); //calling parameterized constructor with 2 arguments that will initialize those two variables with the values of given arguments
+        student2.display();                 //printing details of student2
 
-        System.out.println("\n With getter and setter");
-        Student s4= new Student();
-        s4.setName("Payal Sharma");
-        s4.setAge(20);
-        s4.setDepartment("DevOps");
-        System.out.println("student4 name: " + s4.getName());
-        System.out.println("student4 age: " + s4.getAge());
-        System.out.println("student 4 department: " + s4.getDepartment());
+        Student student3=new Student("Payal",20,"Programming");  //calling parameterized constructor with all 3 arguments that will initialize those(all) variables with the values of given arguments
+        student3.display();                  //printing details of student3
     }
 }
