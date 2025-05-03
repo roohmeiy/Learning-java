@@ -7,10 +7,10 @@
 - throw can throw1 exception while throws can throws multiple exception
 - 
 ```java
-    try{
+        try{
             System.out.println(a[6]);
             int result=5/0; //will not be execute because prior statement thrown an error but st. after catch block will execute
-        }
+            }
   ```
 - if u want to handle multiple exception at once
   - ```java
