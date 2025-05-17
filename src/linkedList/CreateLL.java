@@ -52,6 +52,9 @@ public class CreateLL {
         }
         return head;
     }
+
+
+
     public static void main(String[] args) {
         Node head=new Node(10);
         head=create(head);
@@ -62,6 +65,8 @@ public class CreateLL {
         System.out.println("\n Printing 12 at last=====================================>");
         insertAtLast(head,12);
         display(head);
+        System.out.println("\n Reversed list");
+//        reverseList1(head);
     }
 
 

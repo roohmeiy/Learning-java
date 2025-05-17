@@ -84,22 +84,38 @@ public class LinkedList {
         }
     }
 
-    void reverseList(){
-        if(head==null)
-            System.out.println("List doesn't contain any element so can't reverse.................");
-        else {
-            Node current = head;
-            Node prev = null;
-            Node temp;
-            while (current != null) {
-                temp = current.next;
-                current.next = prev;
-                prev = current;
-                current = temp;
-            }
-            head = prev;
-        }
+//    void reverseList(){
+//        if(head==null)
+//            System.out.println("List doesn't contain any element so can't reverse.................");
+//        else {
+//            Node current = head;
+//            Node prev = null;
+//            Node temp;
+//            while (current != null) {
+//                temp = current.next;
+//                current.next = prev;
+//                prev = current;
+//                current = temp;
+//            }
+//            head = prev;
+//        }
+//    }
+
+    static Node reverseList1(Node head){
+        if(head==null || head.next==null)
+            return head;
+
+//        Node newHead=reverseList1(head.next);
+//        Node headNext= head.next;
+//        head.next.next= head.next;
+//        head.next=null;
+//        return newHead;
+        Node newHead = reverseList1(head.next);
+        head.next.next = head; // Corrected line
+        head.next = null; // Break original link
+        return newHead;
     }
+
     //display
     void display() {
         Node temp = head;
@@ -132,7 +148,8 @@ public class LinkedList {
         System.out.println("Retrieving data at specified index ===============================>");
         l1.getAt(3);    //3
         System.out.println("Reverse a linked list ===========================================>");
-        l1.reverseList();           //5,4,3,12,1,6
+//        l1.reverseList();           //5,4,3,12,1,6
+        l1.head = reverseList1(l1.head);
         l1.display();
     }
 

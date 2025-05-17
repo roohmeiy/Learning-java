@@ -1,0 +1,1 @@
+- Try-with-resources is a feature in Java that ensures automatic resource management, meaning you don’t need to manually close resources like streams. It automatically closes the resource once execution exits the try block.

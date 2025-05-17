@@ -7,7 +7,7 @@ public class Main {
             lt.fun();
         }
         catch(NullPointerException | ArithmeticException e){
-            System.out.println("exception occured");
+            System.out.println("exception occurred");
         }
         Voting voting= new Voting();
             voting.voting();

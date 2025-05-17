@@ -3,53 +3,70 @@ package array;
 import java.util.Arrays;
 
 public class SortSpiralElements {
+
+    static int rowEnd,colEnd, rowStart, colStart, sortCount;
     public static void main(String[] args) {
-        int[][] arr={{1,2,3,4,5},{16,17,18,19,6},{15,24,25,20,7},{14,23,22,21,8},{13,12,11,10,9}};
-
-        int rows= arr.length;
-        int cols= arr[0].length;
-//        System.out.println(rows*cols);
-
-        int[] joined = new int[rows*cols];
+        int[][] arr = {{21,22,23,24,25},{1, 2, 3, 4, 5},{16,17,18,19,20},{11,12,13,14,15} ,{6,7,8,9,10}};
+        int row= arr.length;
+        int col=arr[0].length;
+        rowStart=0;
+        colStart=0;
+        /* sorting into 1d */
+        int[] oneD= new int[row*col];
         int count=0;
-
-        System.out.println("Spiral elements================================================>");
-        for(int i=0;i<arr.length;i++) {
-            for (int j = 0; j < arr[i].length; j++)
-                System.out.print(arr[i][j] + " ");
-            System.out.println();
-        }
-
-        for(int i=0;i<arr.length;i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                joined[count] = arr[i][j];
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
+                oneD[count]=arr[i][j];
                 count++;
             }
         }
+        Arrays.sort(oneD);
+        for(int x: oneD)
+            System.out.print(x + " ");
 
-        System.out.println();
-        System.out.println("Joined in 1d array ===================================>");
-        for(int i=0;i<joined.length;i++)
-            System.out.print(joined[i] + " ");
+        /* placing */
 
-        System.out.println();
-        System.out.println("Sorted===============================================>");
-        Arrays.sort(joined);
-        for(int i=0;i<joined.length;i++)
-            System.out.print(joined[i] + " ");
+        sortCount=0;
+        rowEnd = row - 1;
+        colEnd = col - 1;
+        while (rowStart <= rowEnd && colStart <= colEnd ){
 
-        System.out.println();
-        System.out.println("sorted 2d array=======================================>");
-        count=0;
-        for(int i=0;i<arr.length;i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j]=joined[count];
-                count++;
+            // Left to right
+            for (int i = colStart; i <= colEnd; i++) {
+                arr[rowStart][i] = oneD[sortCount++];
             }
+            rowStart++;
+
+            // Top to bottom
+            for (int i = rowStart; i <= rowEnd; i++) {
+                arr[i][colEnd] = oneD[sortCount++];
+            }
+            colEnd--;
+
+            // Right to left
+            if (rowStart <= rowEnd) {
+                for (int i = colEnd; i >= colStart; i--) {
+                    arr[rowEnd][i] = oneD[sortCount++];
+                }
+                rowEnd--;
+            }
+
+            // Bottom to top
+            if (colStart <= colEnd) {
+                for (int i = rowEnd; i >= rowStart; i--) {
+                    arr[i][colStart] = oneD[sortCount++];
+                }
+                colStart++;
+            }
+
         }
-        for(int i=0;i<arr.length;i++) {
-            for (int j = 0; j < arr[i].length; j++)
-                System.out.print(arr[i][j] + " ");
+
+        /* printing spiral array */
+        System.out.println("\n Printing 2D Array:");
+        for (int[] rows : arr) {
+            for (int num : rows) {
+                System.out.print(num + " ");
+            }
             System.out.println();
         }
     }
