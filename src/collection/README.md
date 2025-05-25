@@ -133,4 +133,72 @@ Comparison between **`Enumeration`**, **`Iterator`**, and **`ListIterator`** in 
   - it is good for retrieval because it inherits RandomAccess Interface
 - when not to use
   - for insertion and deletion ( bcz it iterates from start)
-  - 
+
+---
+## list diff
+
+| Feature                | **ArrayList**                      | **LinkedList**                           | **Vector**                           | **Stack**                                 |
+| ---------------------- | ---------------------------------- | ---------------------------------------- | ------------------------------------ | ----------------------------------------- |
+| **Data Structure**     | Dynamic array                      | Doubly linked list                       | Synchronized dynamic array           | LIFO (Last In First Out) using Vector     |
+| **Ordering**           | Maintains insertion order          | Maintains insertion order                | Maintains insertion order            | Maintains insertion order                 |
+| **Random Access**      | Fast (index-based)                 | Slow (needs traversal)                   | Fast (index-based)                   | Fast (index-based)                        |
+| **Insertion/Deletion** | Slow (shifting elements required)  | Fast (just update pointers)              | Slow (like ArrayList)                | Fast for push/pop                         |
+| **Thread Safety**      | Not thread-safe                    | Not thread-safe                          | **Thread-safe** (synchronized)       | **Thread-safe** (inherits from Vector)    |
+| **Performance**        | Better for search operations       | Better for insert/delete at start/middle | Slower due to synchronization        | Slightly slower due to synchronization    |
+| **Growth Policy**      | Grows by 50%                       | Grows as needed (via nodes)              | Grows by doubling size               | Grows by doubling (inherited from Vector) |
+| **Use Case**           | When frequent access is needed     | When frequent insert/delete is needed    | When thread-safe ArrayList is needed | When LIFO behavior is needed              |
+| **Legacy**             | Part of Java Collections Framework | Part of Java Collections Framework       | **Legacy class**, but still used     | **Legacy class**, extends Vector          |
+
+--- 
+## list, set,queue diff
+
+| Feature                    | **List**                             | **Set**                                 | **Queue**                                              |
+| -------------------------- | ------------------------------------ | --------------------------------------- | ------------------------------------------------------ |
+| **Definition**             | Ordered collection of elements       | Unordered collection of unique elements | Collection for processing elements in a specific order |
+| **Allows Duplicates**      | ✅ Yes                                | ❌ No                                    | ✅ Depends on implementation                            |
+| **Order Maintained**       | ✅ Yes (insertion order)              | ❌ No (except LinkedHashSet)             | ✅ Yes (usually FIFO)                                   |
+| **Index-Based Access**     | ✅ Yes (get by index)                 | ❌ No                                    | ❌ No                                                   |
+| **Common Implementations** | `ArrayList`, `LinkedList`            | `HashSet`, `LinkedHashSet`, `TreeSet`   | `PriorityQueue`, `LinkedList`, `ArrayDeque`            |
+| **Use Case**               | Storing ordered data with duplicates | Ensuring unique items                   | Managing tasks or requests (e.g. job queue)            |
+| **Null Elements**          | ✅ Yes (usually allowed)              | ✅ Yes (some implementations disallow)   | ✅ Yes (except some priority queues)                    |
+
+---
+## Diff b/w ArrayDeque and PriorityQueue
+
+| Feature                   | **ArrayDeque**                            | **PriorityQueue**                                |
+| ------------------------- | ----------------------------------------- | ------------------------------------------------ |
+| 📌 **Purpose**            | Double-ended queue (Deque)                | Priority-based queue                             |
+| 📥 **Order of Elements**  | Maintains **insertion order**             | Orders based on **priority** (natural or custom) |
+| 📦 **Insertion/Removal**  | From both ends: `addFirst()`, `addLast()` | Always removes element with **highest priority** |
+| 🔢 **Internal Structure** | **Resizable array**                       | **Binary Heap (Min-Heap)**                       |
+| ❌ **Allows `null`?**      | ❌ No                                      | ❌ No                                             |
+| ⚙️ **Use Case**           | Stack + Queue, browser history, undo-redo | Task scheduling, job processing                  |
+| 🧠 **Custom Sorting?**    | ❌ No built-in sorting                     | ✅ Yes, using `Comparator`                        |
+| 🧵 **Thread-safe?**       | ❌ No                                      | ❌ No                                             |
+| 📚 **Implements**         | `Deque` interface                         | `Queue` interface                                |
+| 📍 **Example Usage**      | `new ArrayDeque<>()`                      | `new PriorityQueue<>()`                          |
+
+---
+## TreeSet, HashSet and LinkedHashSet diff
+
+| Feature                | **HashSet**                          | **LinkedHashSet**             | **TreeSet**                             |
+| ---------------------- | ------------------------------------ | ----------------------------- | --------------------------------------- |
+| 🔢 **Ordering**        | No order (random)                    | Maintains **insertion order** | Sorted order (natural or custom)        |
+| ⚙️ **Underlying DS**   | Hash Table                           | Hash Table + Linked List      | Red-Black Tree (Self-balancing BST)     |
+| 🚀 **Performance**     | Fastest (O(1) for add/search/delete) | Slightly slower than HashSet  | Slower (O(log n) for add/search/delete) |
+| 🧠 **Allows null?**    | ✅ Yes (only one null element)        | ✅ Yes (only one null element) | ❌ No (throws `NullPointerException`)    |
+| 📦 **Duplicates?**     | ❌ No                                 | ❌ No                          | ❌ No                                    |
+| 📚 **Implements**      | `Set`                                | `Set`                         | `NavigableSet`, `SortedSet`, `Set`      |
+| 🔤 **Sorts elements?** | ❌ No                                 | ❌ No                          | ✅ Yes (Natural/Custom via Comparator)   |
+
+---
+
+| Feature                       | **Hashtable**                        | **HashMap**                                      | **LinkedHashMap**                                | **TreeMap**                               |
+| ----------------------------- | ------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------------- |
+| **Thread Safety**             | Synchronized (thread-safe)           | Not synchronized (not thread-safe)               | Not synchronized (not thread-safe)               | Not synchronized (not thread-safe)        |
+| **Order**                     | No guaranteed order                  | No guaranteed order                              | Maintains insertion order                        | Sorted order (by keys, natural or custom) |
+| **Null Keys Allowed**         | No (null keys or values not allowed) | Yes (one null key, multiple null values allowed) | Yes (one null key, multiple null values allowed) | No (null keys not allowed)                |
+| **Underlying Data Structure** | Hash table                           | Hash table                                       | Hash table + doubly linked list                  | Red-Black tree (self-balancing BST)       |
+| **Performance**               | Slower due to synchronization        | Faster (unsynchronized)                          | Slightly slower than HashMap                     | Slower due to tree operations (O(log n))  |
+| **Introduced In**             | Java 1.0                             | Java 1.2                                         | Java 1.4                                         | Java 1.2                                  |
+| **Use Case**                  | Legacy thread-safe map               | General-purpose non-thread-safe map              | When insertion order matters                     | When sorted map needed                    |
