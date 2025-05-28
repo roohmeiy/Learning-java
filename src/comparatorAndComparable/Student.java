@@ -1,4 +1,4 @@
-package generic;
+package comparatorAndComparable;
 
 public class Student implements Comparable{
 //    int rollno;

@@ -1,4 +1,5 @@
-package generic;
+package comparatorAndComparable;
+
 
 import java.util.ArrayList;
 import java.util.Collections;

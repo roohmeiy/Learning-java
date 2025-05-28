@@ -1,7 +1,5 @@
-package generic;
-
+package wildcards;
 import java.util.*;
-
 
 public class WildcardsMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package generic;
+package comparatorAndComparable;
 
 import java.util.Comparator;
 
