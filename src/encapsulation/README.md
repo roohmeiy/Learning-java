@@ -5,7 +5,7 @@
     1. Data Hiding
     2. Abstraction
 - Public getter and setter methods
-- atleast 1 parameterized constructor
+- no parameterized constructor
 - Follows standard Java Bean conventions
 
 ##  Class Types

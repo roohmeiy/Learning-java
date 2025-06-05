@@ -1,6 +1,4 @@
-package collection;
-
-import com.anudip.learning.Student;
+package collection.list;
 
 import java.util.ArrayList;
 import java.util.List;

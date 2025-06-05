@@ -11,4 +11,4 @@ if u use nextLine() after nextInt() ->  [ next int leave a \n after that so u ne
 unicode- code of unique codes
 ascii-  128 codes
 break and continue for loop
-- labelled break- exit from all outer loop
+- labelled break- exit* from all outer loop

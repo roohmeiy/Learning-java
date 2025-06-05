@@ -10,8 +10,6 @@
 - **Parameterized constructor** - created by programmer
 - **No-arg/zero-arg constructor** - created by programmer
 
-
-
 ## Differences between Constructors and Methods
 
 | Constructor                                                             | Method |

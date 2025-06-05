@@ -12,6 +12,7 @@ public class MethodOverloadingMain {
         Varargs v=new Varargs();
         v.display(10);
         v.display(10,20,30);
+        v.display();
 
         System.out.println();
 

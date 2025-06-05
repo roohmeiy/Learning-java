@@ -65,7 +65,7 @@ public class StringFunctions {
         //contains() -> check if a substring exists -> not case sensitive
         System.out.println();
         System.out.println("Java".contains("av")); // true
-        System.out.println("Java".contains("Av"));
+        System.out.println("Java".contains("Av"));//false
 
         //startsWith() & endsWith() ------>Checks if a string starts/ends with a substring.
         System.out.println();
@@ -134,7 +134,7 @@ public class StringFunctions {
         languages[1]="Python";
         System.out.println();
         System.out.println(languages[0]);
-        System.out.println(joined);
+        System.out.println(joined); // join multiple strings with a delimiter (separator).
         System.out.println();
         for(String x: languages)
             System.out.println(x);

@@ -13,11 +13,11 @@ public class PrimeNum{
         else
             System.out.println("not a prime num");
     }
-      boolean isPrime(int num){
-          for( int i=2; i < num;i++ ){
-              if ( num < 2  || num%i==0)
-                  return false;
-          }
-          return true;
-      }
+    boolean isPrime(int num){
+        for( int i=2; i < num;i++ ){
+            if ( num < 2  || num%i==0)
+                return false;
+        }
+        return true;
+    }
 }
